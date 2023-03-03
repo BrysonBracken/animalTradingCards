@@ -1,0 +1,78 @@
+/*
+  Card level
+*/
+
+h2 {
+  margin: 10px 20px;
+  font-family: 'Kanit', sans-serif;
+}
+
+.card-outline {
+  border: solid #dbc412 8px;
+  width: 350px;
+  background: linear-gradient(135deg, rgba(56,183,64,1) 0%, rgba(112,189,20,1) 36%, rgba(29,101,8,1) 69%, rgba(56,183,64,1) 100%);
+  border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 7px 5px #cecece;
+}
+
+.animal-image {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid #dbc412 5px;
+  border-radius: 5px;
+ } 
+
+/*
+Information level
+*/
+
+p {
+  margin: 5px 15px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+}
+
+ul {
+  padding: 0;
+  margin: 5px 15px;
+}
+
+li {
+  list-style: none;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+}
+
+li span {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+}
+
+hr {
+  height: 1px;
+  background-color: #000;
+  border: none;
+  margin: 0 15px;
+}
+
+.info-outline {
+  margin: 10px 20px 20px;
+  border: solid #a0cf51 5px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(162,224,89,1) 0%, rgba(31,203,94,1) 36%, rgba(76,225,33,1) 69%, rgba(85,220,157,1) 100%);
+}
+
+.fact {
+  padding-top: 15px;
+  font-style: italic;
+}
+
+.description {
+  padding-bottom: 5px;
+}
