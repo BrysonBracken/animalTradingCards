@@ -6,7 +6,8 @@
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 /*
