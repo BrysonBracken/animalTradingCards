@@ -1,5 +1,5 @@
-# monkeyTradingCard
-An HTML, CSS trading card of a monkey.
+# Animal trading Cards
+HTML, CSS trading cards of animals.
 
 This was built as a project for Udemy
 it was built using HTML and CSS.
