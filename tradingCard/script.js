@@ -45,30 +45,55 @@ const cards = [
         'mantis.jpg',
         'Mantis Shrimp',
         'blue'
+    ),
+    new Card('Olm Salamander',
+        'Genereations in the dark has caused this salamander to grown skin over it eyes and become blind.',
+        'Proteus anguinus',
+        '40 cm',
+        '58 years',
+        'Well oxygenated underground water',
+        'The olm salamander is blind and "sees" through week electromagnetic pulses, sound, and smell. Local belive it to be babies of cave dragons.',
+        'salamander.jpeg',
+        'Olm Salamander',
+        'grey'
+    ),
+    new Card('Emperor Scropion',
+        'The Emperor scorpion is the largest scorpions in the world and glows green or blue under ultraviolet light.',
+        'Proteus anguinus',
+        '8 in.',
+        '6–8 years',
+        'West Africa',
+        "The Emperor scorpion has sensory hairs to detect to detect vibration in the air and ground so that they can detect prey. The Emperor scorpion's sting is normally not lethal.",
+        'Scorpion.jpeg',
+        'Emperor Scropion',
+        'brown'
     )
 ];
 
 cards.forEach(function (card, i) {
     const html = `
         <div class="card-outline habitat-${card.habitatColor}">
+            
             <!-- Card animal name -->
-            <h2>${card.animalName}</h2>
-            <!-- Card animal picture -->
-            <img class="animal-image" src="images/${card.imgSrc}" alt="${card.imgAlt}">
-            <div class="info-outline">
-                <!-- Card animal facts -->
-                <p class="fact">${card.facts}</p>
-                <hr>
-                <ul>
-                    <!-- Card animal data points -->
-                    <li><span>Scientific Name</span>: ${card.scientificName}</li>
-                    <li><span>Average Height</span>: ${card.height}</li>
-                    <li><span>Average Lifespan</span>: ${card.lifespan}</li>
-                    <li><span>Habitat</span>: ${card.habitat}</li>
-                </ul>
-                <hr>
-                <!-- Card animal description -->
-                <p class="description">${card.description}</p>
+            <h2 class="title">${card.animalName}</h2>
+            <div class="card-inner">
+                <!-- Card animal picture -->
+                <img class="animal-image" src="images/${card.imgSrc}" alt="${card.imgAlt}">
+                <div class="info-outline">
+                    <!-- Card animal facts -->
+                    <p class="fact">${card.facts}</p>
+                    <hr>
+                    <ul>
+                        <!-- Card animal data points -->
+                        <li><span>Scientific Name</span>: ${card.scientificName}</li>
+                        <li><span>Average Height</span>: ${card.height}</li>
+                        <li><span>Average Lifespan</span>: ${card.lifespan}</li>
+                        <li><span>Habitat</span>: ${card.habitat}</li>
+                    </ul>
+                    <hr>
+                    <!-- Card animal description -->
+                    <p class="description">${card.description}</p>
+                </div>
             </div>
         </div>`;
 
