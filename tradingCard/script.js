@@ -3,6 +3,64 @@
 // elements
 
 const cardsContainer = document.querySelector('.cards-container');
+const searchInput = document.querySelector('#search');
+const searchButton = document.querySelector('.search-button');
+const homeButton = document.querySelector('.home');
+
+// variables
+
+let searchText = '';
+
+
+// Sort Functions
+
+const alphaSort = function (a, b) {
+    const nameA = a.animalName.toUpperCase();
+    const nameB = b.animalName.toUpperCase();
+    if (nameA > nameB) {
+        return 1;
+    }
+    if (nameB > nameA) {
+        return -1;
+    }
+    return 0;
+};
+
+const alphaSortReverse = function (a, b) {
+    const nameA = a.animalName.toUpperCase();
+    const nameB = b.animalName.toUpperCase();
+    if (nameA < nameB) {
+        return 1;
+    }
+    if (nameB < nameA) {
+        return -1;
+    }
+    return 0;
+};
+
+const lifeSort = function (a, b) {
+    const nameA = a.animalName.toUpperCase();
+    const nameB = b.animalName.toUpperCase();
+    if (nameA > nameB) {
+        return 1;
+    }
+    if (nameB > nameA) {
+        return -1;
+    }
+    return 0;
+};
+
+const lifeSortReverse = function (a, b) {
+    const nameA = a.animalName.toUpperCase();
+    const nameB = b.animalName.toUpperCase();
+    if (nameA < nameB) {
+        return 1;
+    }
+    if (nameB < nameA) {
+        return -1;
+    }
+    return 0;
+};
 
 // Card Object
 
@@ -70,32 +128,67 @@ const cards = [
     )
 ];
 
-cards.forEach(function (card, i) {
-    const html = `
-        <div class="card-outline habitat-${card.habitatColor}">
-            
-            <!-- Card animal name -->
-            <h2 class="title">${card.animalName}</h2>
-            <div class="card-inner">
-                <!-- Card animal picture -->
-                <img class="animal-image" src="images/${card.imgSrc}" alt="${card.imgAlt}">
-                <div class="info-outline">
-                    <!-- Card animal facts -->
-                    <p class="fact">${card.facts}</p>
-                    <hr>
-                    <ul>
-                        <!-- Card animal data points -->
-                        <li><span>Scientific Name</span>: ${card.scientificName}</li>
-                        <li><span>Average Height</span>: ${card.height}</li>
-                        <li><span>Average Lifespan</span>: ${card.lifespan}</li>
-                        <li><span>Habitat</span>: ${card.habitat}</li>
-                    </ul>
-                    <hr>
-                    <!-- Card animal description -->
-                    <p class="description">${card.description}</p>
-                </div>
-            </div>
-        </div>`;
+const displayCards = function (cardList) {
+    let html = '';
+    cardsContainer.innerHTML = html;
+    if (cardList.length) {
+        cardList.forEach(function (card, i) {
+            html = `
+                <div class="card-outline habitat-${card.habitatColor}">
+                    
+                    <!-- Card animal name -->
+                    <h2 class="title">${card.animalName}</h2>
+                    <div class="card-inner">
+                        <!-- Card animal picture -->
+                        <img class="animal-image" src="images/${card.imgSrc}" alt="${card.imgAlt}">
+                        <div class="info-outline">
+                            <!-- Card animal facts -->
+                            <p class="fact">${card.facts}</p>
+                            <hr>
+                            <ul>
+                                <!-- Card animal data points -->
+                                <li><span>Scientific Name</span>: ${card.scientificName}</li>
+                                <li><span>Average Height</span>: ${card.height}</li>
+                                <li><span>Average Lifespan</span>: ${card.lifespan}</li>
+                                <li><span>Habitat</span>: ${card.habitat}</li>
+                            </ul>
+                            <hr>
+                            <!-- Card animal description -->
+                            <p class="description">${card.description}</p>
+                        </div>
+                    </div>
+                </div>`;
 
-    cardsContainer.insertAdjacentHTML('beforeend', html)
-})
+            cardsContainer.insertAdjacentHTML('beforeend', html);
+        });
+    } else {
+        html = '<p>No cards found</p>';
+        cardsContainer.insertAdjacentHTML('beforeend', html);
+    }
+};
+
+displayCards(cards);
+
+// Searchbar
+function searchEnter(e) {
+    if (e.keyCode === 13) {
+        searchFunc();
+    }
+};
+
+const searchFunc = function () {
+    const cardList = [];
+    searchText = searchInput.value.toLowerCase();
+    cards.forEach(function (card, i) {
+        if (card.animalName.toLowerCase().includes(searchText)) {
+            console.log(card.animalName);
+            cardList.push(card)
+        }
+    })
+    displayCards(cardList);
+};
+
+// Event Listeners
+
+searchButton.addEventListener('click', searchFunc)
+homeButton.addEventListener('click', e => displayCards(cards))
