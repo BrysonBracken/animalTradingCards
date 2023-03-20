@@ -125,6 +125,28 @@ const cards = [
         'Scorpion.jpeg',
         'Emperor Scropion',
         'brown'
+    ),
+    new Card('Puma',
+        'The puma is the fourth largest cat in the world.',
+        'Puma concolor',
+        '24 – 35 in.',
+        '8 – 13 years',
+        'Americas',
+        "Pumas hold the world record for animal with the most names, being reffered to as puma, cougar, mountain lion, and the list continues with many more names!",
+        'puma.jpeg',
+        'Puma',
+        'brown'
+    ),
+    new Card('Pompeii worm',
+        "Normally the pompeii worm's tail can be found resting in water up to 200 degrees farenheit!",
+        'Alvinella pompejanaconcolor',
+        '5 in.',
+        'unknown',
+        'Hydrothermal vents',
+        "The pompeii worm is known as an extremophile, meaning that it thrives in extreme conditions.",
+        'pompeii_worm.jpeg',
+        'Pompeii worm',
+        'red'
     )
 ];
 
