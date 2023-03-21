@@ -147,6 +147,28 @@ const cards = [
         'pompeii_worm.jpeg',
         'Pompeii worm',
         'red'
+    ),
+    new Card('Canary',
+        "A common pet bird of the finch family.",
+        'Serinus canaria domestica',
+        '4.7 – 7.9 in.',
+        '10 – 12 years',
+        'Originated in Macaronesian Islands',
+        "The male canary is the better singer compared to their counter parts. This is due to the male's song being a method of attacting a female and marking their territory.",
+        'canary.jpeg',
+        'Canary',
+        'yellow'
+    ),
+    new Card('Leafcutter Ant',
+        "Leafcutter ants have specialized jaws that saw off pieces of leaf.",
+        ' Atta cephalotes',
+        '2 mm',
+        '3-5 weeks',
+        'Latin American and Caribbean forest floors',
+        "Leafcutter ant is a generic name that encompases 40+ ant species that chew leaves. They can carry up to 50 times their weight!",
+        'leaf_cutter_ant.jpeg',
+        'Leafcutter Ant',
+        'green'
     )
 ];
 
