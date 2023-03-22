@@ -5,6 +5,7 @@
   top: 0;
   left: 0;
   display: flex;
+  justify-content: stretch;
   height: 4em;
   background-color: #fff;
   margin: 0;
@@ -12,22 +13,15 @@
 }
 
 .nav-1 {
-  width: 33%;
+  flex-grow: 1;
   margin: 0;
   padding: 0;
 }
 
 .nav-2 {
-  width: 33%;
-  margin: 0;
-  padding: 0;
   display: flex;
-  align-items: center;
-  align-content: center;
-}
-
-.nav-3 {
-  width: 33%;
+  justify-content: flex-end;
+  flex-grow: 1;
   margin: 0;
   padding: 0;
   display: flex;
@@ -51,7 +45,6 @@
 #search-form {
   justify-content: right;
   background-color: #f4f4f4;
-  margin: auto 1em auto auto;
   border-radius: 1.5em;
   width: 15em;
   height: 44px;
@@ -62,6 +55,7 @@
   border-width: 2px;
   border-style: solid;
   overflow: hidden;
+  margin: auto 1em;
 }
 
 #search {
