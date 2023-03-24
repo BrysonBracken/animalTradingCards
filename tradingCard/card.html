@@ -23,7 +23,7 @@
 			<img class="logo" src="images/logo.png" alt="logo">
 		</div>
 		<div class="nav-2">
-			<img class="home" src="images/home.jpeg" alt="home">
+			<img class="nav-item home" src="images/home.jpeg" alt="home">
 			<div id="search-form">
 				<input id="search" type="text" placeholder="Search" onkeydown="searchEnter(event)">
 				<button class="search-button">
@@ -36,6 +36,23 @@
 			</div>
 		</div>
 	</div>
+	<div class="options">
+		<img id="sort" class="sort" src="images/sort2.png" alt="sort">
+		<div class="sort-modal hidden">
+			<h2 class="sort-title">Sort by:</h2>
+			<div class="sort-options">
+				<ul>
+					<li class="sort-item">Oldest Arrivals</li>
+					<li class="sort-item">Newest Arrivals</li>
+					<li class="sort-item">A-Z</li>
+					<li class="sort-item">Z-A</li>
+					<li class="sort-item">Scientific Name A-Z</li>
+					<li class="sort-item">Scientific name Z-A</li>
+					<li class="sort-item">Color</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	<div class="cards-container">
 		<!-- cards dynamically added -->
 	</div>
@@ -43,5 +60,7 @@
 <footer>
 	<p>Copyright Bryson Bracken</p>
 </footer>
+
+<div class="overlay hidden"></div>
 
 </html>

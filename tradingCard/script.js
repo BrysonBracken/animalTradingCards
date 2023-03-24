@@ -3,17 +3,26 @@
 // elements
 
 const cardsContainer = document.querySelector('.cards-container');
+const sortContainer = document.querySelector('.sort-modal');
+const overlay = document.querySelector('.overlay');
 const searchInput = document.querySelector('#search');
 const searchButton = document.querySelector('.search-button');
 const homeButton = document.querySelector('.home');
+const sortButton = document.querySelector('#sort');
+const sortOptions = document.querySelector('.sort-options');
+const sortItems = document.querySelectorAll('.sort-item');
 
 // variables
 
 let searchText = '';
+let sortChosen = 'Oldest Arrivals'
 
 
 // Sort Functions
 
+
+
+// sort by name
 const alphaSort = function (a, b) {
     const nameA = a.animalName.toUpperCase();
     const nameB = b.animalName.toUpperCase();
@@ -38,9 +47,10 @@ const alphaSortReverse = function (a, b) {
     return 0;
 };
 
-const lifeSort = function (a, b) {
-    const nameA = a.animalName.toUpperCase();
-    const nameB = b.animalName.toUpperCase();
+// sort by scientific name
+const scientificSort = function (a, b) {
+    const nameA = a.scientificName.toUpperCase();
+    const nameB = b.scientificName.toUpperCase();
     if (nameA > nameB) {
         return 1;
     }
@@ -50,13 +60,26 @@ const lifeSort = function (a, b) {
     return 0;
 };
 
-const lifeSortReverse = function (a, b) {
-    const nameA = a.animalName.toUpperCase();
-    const nameB = b.animalName.toUpperCase();
+const scientificSortReverse = function (a, b) {
+    const nameA = a.scientificName.toUpperCase();
+    const nameB = b.scientificName.toUpperCase();
     if (nameA < nameB) {
         return 1;
     }
     if (nameB < nameA) {
+        return -1;
+    }
+    return 0;
+};
+
+// sort by color
+const colorSort = function (a, b) {
+    const nameA = a.habitatColor.toUpperCase();
+    const nameB = b.habitatColor.toUpperCase();
+    if (nameA > nameB) {
+        return 1;
+    }
+    if (nameB > nameA) {
         return -1;
     }
     return 0;
@@ -88,13 +111,13 @@ const cards = [
         '2 feet',
         '25 years',
         'Tropical rainforests',
-        'Found in tropical forests of Central and South America, from the south of Mexico to Brazil. Spider monkeys have long dexterous tails that they use as a fifth limb to hold on to tree branches. The genus is made up of seven species.',
+        'They are found in tropical forests of Central and South America, from the south of Mexico to Brazil. Spider monkeys have long dexterous tails that they use as a fifth limb to hold on to tree branches. The genus is made up of seven species.',
         'makm-photography-Glm8xUm8Am4-unsplash.jpg',
         'Spider Monkey',
         'green'
     ),
     new Card('Mantis Shrimp',
-        'The mantis shrimp is well known for their striking force/speed that can boil water.',
+        'The mantis shrimp is well known for its striking force/speed that can boil water.',
         'Stomatopod',
         '4-8 in.',
         '3-6 years',
@@ -105,18 +128,18 @@ const cards = [
         'blue'
     ),
     new Card('Olm Salamander',
-        'Genereations in the dark has caused this salamander to grown skin over it eyes and become blind.',
+        'Generations in the dark have caused this salamander to grow skin over its eyes and become blind.',
         'Proteus anguinus',
         '40 cm',
         '58 years',
         'Well oxygenated underground water',
-        'The olm salamander is blind and "sees" through week electromagnetic pulses, sound, and smell. Local belive it to be babies of cave dragons.',
+        'The olm salamander is blind and "sees" through weak electromagnetic pulses, sounds, and smells. Locals believe it to be babies of cave dragons.',
         'salamander.jpeg',
         'Olm Salamander',
         'grey'
     ),
     new Card('Emperor Scropion',
-        'The Emperor scorpion is the largest scorpions in the world and glows green or blue under ultraviolet light.',
+        'The Emperor scorpion is the largest scorpion in the world and glow green or blue under ultraviolet light.',
         'Proteus anguinus',
         '8 in.',
         '6–8 years',
@@ -132,7 +155,7 @@ const cards = [
         '24 – 35 in.',
         '8 – 13 years',
         'Americas',
-        "Pumas hold the world record for animal with the most names, being reffered to as puma, cougar, mountain lion, and the list continues with many more names!",
+        "Pumas hold the world record for animal with the most names, being referred to as puma, cougar, mountain lion, and the list continues with many more names!",
         'puma.jpeg',
         'Puma',
         'brown'
@@ -154,18 +177,18 @@ const cards = [
         '4.7 – 7.9 in.',
         '10 – 12 years',
         'Originated in Macaronesian Islands',
-        "The male canary is the better singer compared to their counter parts. This is due to the male's song being a method of attacting a female and marking their territory.",
+        "The male canary is the better singer compared to its counter part. This is due to the male's song being a method of attracting a female and marking their territory.",
         'canary.jpeg',
         'Canary',
         'yellow'
     ),
     new Card('Leafcutter Ant',
-        "Leafcutter ants have specialized jaws that saw off pieces of leaf.",
+        "Leafcutter ants have specialized jaws that saw off pieces of leaves.",
         ' Atta cephalotes',
         '2 mm',
         '3-5 weeks',
         'Latin American and Caribbean forest floors',
-        "Leafcutter ant is a generic name that encompases 40+ ant species that chew leaves. They can carry up to 50 times their weight!",
+        "Leafcutter ant is a generic name that encompasses 40+ ant species that chew leaves. They can carry up to 50 times their weight!",
         'leaf_cutter_ant.jpeg',
         'Leafcutter Ant',
         'green'
@@ -232,7 +255,61 @@ const searchFunc = function () {
     displayCards(cardList);
 };
 
+// Sort Feature
+
+const openSortModal = function () {
+    sortContainer.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+    overlay.classList.add('sort-overlay');
+
+    sortItems.forEach(item => {
+        item.classList.remove('chosen');
+        if (item.textContent === sortChosen) item.classList.add('chosen');
+    });
+
+};
+
+const closeSortModal = function () {
+    sortContainer.classList.add('hidden');
+    overlay.classList.add('hidden');
+    overlay.classList.remove('sort-overlay');
+};
+
+const sortFunc = function (item) {
+    const cardsClone = structuredClone(cards);
+    sortChosen = item.textContent;
+    switch (sortChosen) {
+        case 'Oldest Arrivals':
+            displayCards(cards);
+            break;
+        case 'Newest Arrivals':
+            displayCards(cardsClone.reverse());
+            break;
+        case 'A-Z':
+            displayCards(cardsClone.sort(alphaSort));
+            break;
+        case 'Z-A':
+            displayCards(cardsClone.sort(alphaSortReverse));
+            break;
+        case 'Scientific Name A-Z':
+            displayCards(cardsClone.sort(scientificSort));
+            break;
+        case 'Scientific name Z-A':
+            displayCards(cardsClone.sort(scientificSortReverse));
+            break;
+        case 'Color':
+            displayCards(cardsClone.sort(colorSort));
+    }
+    closeSortModal();
+};
+
 // Event Listeners
 
-searchButton.addEventListener('click', searchFunc)
-homeButton.addEventListener('click', e => displayCards(cards))
+searchButton.addEventListener('click', searchFunc);
+homeButton.addEventListener('click', e => displayCards(cards));
+sortButton.addEventListener('click', openSortModal);
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSortModal() });
+sortOptions.addEventListener('click', (e) => sortFunc(e.target));
+overlay.addEventListener('click', (e) => {
+    if (overlay.classList.contains('sort-overlay')) closeSortModal();
+});
