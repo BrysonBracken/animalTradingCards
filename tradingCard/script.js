@@ -138,13 +138,13 @@ const cards = [
         'Olm Salamander',
         'grey'
     ),
-    new Card('Emperor Scropion',
+    new Card('Emperor Scorpion',
         'The Emperor scorpion is the largest scorpion in the world and glow green or blue under ultraviolet light.',
         'Proteus anguinus',
         '8 in.',
         '6–8 years',
         'West Africa',
-        "The Emperor scorpion has sensory hairs to detect to detect vibration in the air and ground so that they can detect prey. The Emperor scorpion's sting is normally not lethal.",
+        "The Emperor scorpion has sensory hairs to detect vibrations in the air and ground so that they can sense prey. The Emperor scorpion's sting is normally not lethal.",
         'Scorpion.jpeg',
         'Emperor Scropion',
         'brown'
@@ -192,7 +192,29 @@ const cards = [
         'leaf_cutter_ant.jpeg',
         'Leafcutter Ant',
         'green'
-    )
+    ),
+    new Card('Great White Shark',
+        "The Great White Shark is an apex predator found coastal waters of every ocean!",
+        'Carcharodon carcharias',
+        '15 – 16 ft',
+        'est. 30 to 70 years',
+        'Coastal waters',
+        "Despite the ferocious man-eating depiction made by the Steven Spielberg movie 'Jaws,' Great White Shark attacks are actually rare!",
+        'great_white_shark.jpeg',
+        'Great White Shark',
+        'blue'
+    ),
+    new Card('Toucan',
+        "There are more that 40 different species of Toucan!",
+        'Ramphastidae',
+        'Up to 24 in.',
+        '12 - 20 years',
+        'Central and South America',
+        "The bright colors of the Toucan are actually a clever means of camouflage! Their bright colors alongside the black makes them blend in to the colorful forest plants.",
+        'toucan.jpeg',
+        'Toucan',
+        'yellow'
+    ),
 ];
 
 const displayCards = function (cardList) {
