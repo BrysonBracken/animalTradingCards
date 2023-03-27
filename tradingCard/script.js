@@ -215,6 +215,28 @@ const cards = [
         'Toucan',
         'yellow'
     ),
+    new Card('Mountain Goat',
+        'The Mountain Goat, also known as the Rocky Mountain Goat, is a sure footed animal that lives on steep mountains.',
+        'Oreamnos americanus',
+        '40 cm',
+        '12 - 18 years',
+        'Northwestern North America',
+        'The Mountain Goat can jump up to 12 ft to aid in traversing the steep, treacherous mountain sides!',
+        'mountain_goat.jpeg',
+        'Mountain Goat',
+        'grey'
+    ),
+    new Card('Greater Bilby',
+        'The Greater Bilby is a rabbit-like nocturnal marsupial that lives in burrows.',
+        'Macrotis lagotis',
+        '11 to 22 in.',
+        '6 - 7 years',
+        'Range of Australian habitats',
+        'The Greater Bilby copes with the extreme Australian heat by sleeping during the day and feeding at night. The obtain all of their water from the plants and insects that they feed on.',
+        'bilby.jpeg',
+        'Bilby',
+        'red'
+    ),
 ];
 
 const displayCards = function (cardList) {
