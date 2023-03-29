@@ -1,0 +1,14 @@
+{
+  "name": "animaltradingcards",
+  "version": "1.0.0",
+  "description": "HTML, CSS trading cards of animals that are added dynamically with Js.",
+  "scripts": {
+    "start": "parcel tradingCard/card.html",
+    "build": "parcel build tradingCard/card.html"
+  },
+  "author": "Bryson Bracken",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

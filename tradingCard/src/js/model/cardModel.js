@@ -1,0 +1,150 @@
+class Card {
+    constructor(animalName, facts, scientificName, height,
+        lifespan, habitat, description, imgSrc, imgAlt, habitatColor) {
+        this.animalName = animalName;
+        this.facts = facts;
+        this.scientificName = scientificName;
+        this.height = height;
+        this.lifespan = lifespan;
+        this.habitat = habitat;
+        this.description = description;
+        this.imgSrc = imgSrc
+        this.imgAlt = imgAlt;
+        this.habitatColor = habitatColor;
+    }
+};
+
+export const cardList = [
+    new Card('Spider Monkey',
+        'Spider monkeys are named after their spider-like appearance as they hang upside down by their tails.',
+        'Ateles',
+        '2 feet',
+        '25 years',
+        'Tropical rainforests',
+        'They are found in tropical forests of Central and South America, from the south of Mexico to Brazil. Spider monkeys have long dexterous tails that they use as a fifth limb to hold on to tree branches. The genus is made up of seven species.',
+        'makm-photography-Glm8xUm8Am4-unsplash.jpg',
+        'Spider Monkey',
+        'green'
+    ),
+    new Card('Mantis Shrimp',
+        'The mantis shrimp is well known for its striking force/speed that can boil water.',
+        'Stomatopod',
+        '4-8 in.',
+        '3-6 years',
+        'Indian & Pacific Oceans',
+        'A small, aggressive marine Crustacean found in tropical and subtropical oceans. They sport vibrant colors and can club prey with the force of a bullet.',
+        'mantis.jpg',
+        'Mantis Shrimp',
+        'blue'
+    ),
+    new Card('Olm Salamander',
+        'Generations in the dark have caused this salamander to grow skin over its eyes and become blind.',
+        'Proteus anguinus',
+        '40 cm',
+        '58 years',
+        'Well oxygenated underground water',
+        'The olm salamander is blind and "sees" through weak electromagnetic pulses, sounds, and smells. Locals believe it to be babies of cave dragons.',
+        'salamander.jpeg',
+        'Olm Salamander',
+        'grey'
+    ),
+    new Card('Emperor Scorpion',
+        'The Emperor scorpion is the largest scorpion in the world and glow green or blue under ultraviolet light.',
+        'Proteus anguinus',
+        '8 in.',
+        '6–8 years',
+        'West Africa',
+        "The Emperor scorpion has sensory hairs to detect vibrations in the air and ground so that they can sense prey. The Emperor scorpion's sting is normally not lethal.",
+        'Scorpion.jpeg',
+        'Emperor Scropion',
+        'brown'
+    ),
+    new Card('Puma',
+        'The puma is the fourth largest cat in the world.',
+        'Puma concolor',
+        '24 – 35 in.',
+        '8 – 13 years',
+        'Americas',
+        "Pumas hold the world record for animal with the most names, being referred to as puma, cougar, mountain lion, and the list continues with many more names!",
+        'puma.jpeg',
+        'Puma',
+        'brown'
+    ),
+    new Card('Pompeii worm',
+        "Normally the pompeii worm's tail can be found resting in water up to 200 degrees farenheit!",
+        'Alvinella pompejanaconcolor',
+        '5 in.',
+        'unknown',
+        'Hydrothermal vents',
+        "The pompeii worm is known as an extremophile, meaning that it thrives in extreme conditions.",
+        'pompeii_worm.jpeg',
+        'Pompeii worm',
+        'red'
+    ),
+    new Card('Canary',
+        "A common pet bird of the finch family.",
+        'Serinus canaria domestica',
+        '4.7 – 7.9 in.',
+        '10 – 12 years',
+        'Originated in Macaronesian Islands',
+        "The male canary is the better singer compared to its counter part. This is due to the male's song being a method of attracting a female and marking their territory.",
+        'canary.jpeg',
+        'Canary',
+        'yellow'
+    ),
+    new Card('Leafcutter Ant',
+        "Leafcutter ants have specialized jaws that saw off pieces of leaves.",
+        ' Atta cephalotes',
+        '2 mm',
+        '3-5 weeks',
+        'Latin American and Caribbean forest floors',
+        "Leafcutter ant is a generic name that encompasses 40+ ant species that chew leaves. They can carry up to 50 times their weight!",
+        'leaf_cutter_ant.jpeg',
+        'Leafcutter Ant',
+        'green'
+    ),
+    new Card('Great White Shark',
+        "The Great White Shark is an apex predator found coastal waters of every ocean!",
+        'Carcharodon carcharias',
+        '15 – 16 ft',
+        'est. 30 to 70 years',
+        'Coastal waters',
+        "Despite the ferocious man-eating depiction made by the Steven Spielberg movie 'Jaws,' Great White Shark attacks are actually rare!",
+        'great_white_shark.jpeg',
+        'Great White Shark',
+        'blue'
+    ),
+    new Card('Toucan',
+        "There are more that 40 different species of Toucan!",
+        'Ramphastidae',
+        'Up to 24 in.',
+        '12 - 20 years',
+        'Central and South America',
+        "The bright colors of the Toucan are actually a clever means of camouflage! Their bright colors alongside the black makes them blend in to the colorful forest plants.",
+        'toucan.jpeg',
+        'Toucan',
+        'yellow'
+    ),
+    new Card('Mountain Goat',
+        'The Mountain Goat, also known as the Rocky Mountain Goat, is a sure footed animal that lives on steep mountains.',
+        'Oreamnos americanus',
+        '40 cm',
+        '12 - 18 years',
+        'Northwestern North America',
+        'The Mountain Goat can jump up to 12 ft to aid in traversing the steep, treacherous mountain sides!',
+        'mountain_goat.jpeg',
+        'Mountain Goat',
+        'grey'
+    ),
+    new Card('Greater Bilby',
+        'The Greater Bilby is a rabbit-like nocturnal marsupial that lives in burrows.',
+        'Macrotis lagotis',
+        '11 to 22 in.',
+        '6 - 7 years',
+        'Range of Australian habitats',
+        'The Greater Bilby copes with the extreme Australian heat by sleeping during the day and feeding at night. The obtain all of their water from the plants and insects that they feed on.',
+        'bilby.jpeg',
+        'Bilby',
+        'red'
+    ),
+];
