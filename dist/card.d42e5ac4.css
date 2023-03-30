@@ -1,5 +1,6 @@
 .navbar {
   height: 4em;
+  z-index: 500;
   background-color: #fff;
   justify-content: stretch;
   margin: 0;
@@ -153,49 +154,58 @@ body {
 
 h2 {
   text-align: left;
-  margin: 10px 20px;
+  margin: 7px 14px;
   font-family: Kanit, sans-serif;
+  font-size: 1em;
 }
 
 .card-outline {
-  width: 350px;
-  height: 700px;
-  border: 8px solid #dbc412;
-  border-radius: 25px;
+  width: 263px;
+  height: 525px;
+  border: 6px solid #dbc412;
+  border-radius: 18px;
+  transition: scale .5s;
   display: block;
   overflow: auto;
-  box-shadow: 7px 5px #cecece;
+  box-shadow: 5px 20px 30px -10px #26394d;
+}
+
+.card-outline:hover {
+  scale: 1.25;
 }
 
 .animal-image {
-  width: 300px;
-  max-height: 250px;
-  border: 5px solid #dbc412;
-  border-radius: 5px;
+  width: 230px;
+  max-height: 187px;
+  border: 3px solid #dbc412;
+  border-radius: 3px;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
 p {
-  margin: 5px 15px;
+  margin: 3px 11px;
   font-family: Kanit, sans-serif;
+  font-size: .77rem;
   font-weight: 300;
 }
 
 ul {
-  margin: 5px 15px;
+  margin: 3px 11px;
   padding: 0;
 }
 
 li {
   font-family: Kanit, sans-serif;
+  font-size: .77rem;
   font-weight: 300;
   list-style: none;
 }
 
 li span {
   font-family: Kanit, sans-serif;
+  font-size: .77rem;
   font-weight: 500;
 }
 
@@ -203,21 +213,22 @@ hr {
   height: 1px;
   background-color: #000;
   border: none;
-  margin: 0 15px;
+  margin: 0 11px;
 }
 
 .info-outline {
-  border-radius: 5px;
-  margin: 10px 20px 20px;
+  border-radius: 3px;
+  margin: 7px 14px 14px;
 }
 
 .fact {
-  padding-top: 15px;
+  padding-top: 11px;
+  font-size: .77rem;
   font-style: italic;
 }
 
 .description {
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 }
 
 .habitat-green.card-outline {
@@ -226,7 +237,7 @@ hr {
 
 .habitat-green .info-outline {
   background: linear-gradient(135deg, #a2e059 0%, #1fcb5e 36%, #4ce121 69%, #55dc9d 100%);
-  border: 5px solid #a0cf51;
+  border: 3px solid #a0cf51;
 }
 
 .habitat-blue.card-outline {
@@ -235,7 +246,7 @@ hr {
 
 .habitat-blue .info-outline {
   background: linear-gradient(135deg, #5996e0 0%, #1f55cb 36%, #215ee1 69%, #55b1dc 100%);
-  border: 5px solid #cbcf51;
+  border: 3px solid #cbcf51;
 }
 
 .habitat-brown.card-outline {
@@ -244,7 +255,7 @@ hr {
 
 .habitat-brown .info-outline {
   background: linear-gradient(135deg, #e0b559 0%, #cb891f 36%, #e19421 69%, #dca855 100%);
-  border: 5px solid #cbcf51;
+  border: 3px solid #cbcf51;
 }
 
 .habitat-red.card-outline {
@@ -253,7 +264,7 @@ hr {
 
 .habitat-red .info-outline {
   background: linear-gradient(135deg, #e05959 0%, #cb1f1f 36%, #e12121 69%, #dc5555 100%);
-  border: 5px solid #cbcf51;
+  border: 3px solid #cbcf51;
 }
 
 .habitat-grey.card-outline {
@@ -262,7 +273,7 @@ hr {
 
 .habitat-grey .info-outline {
   background: linear-gradient(135deg, #dadada 0%, #b9b9b9 36%, #dedede 69%, #dcdcdd 100%);
-  border: 5px solid #cbcf51;
+  border: 3px solid #cbcf51;
 }
 
 .habitat-yellow.card-outline {
@@ -271,7 +282,7 @@ hr {
 
 .habitat-yellow .info-outline {
   background: linear-gradient(135deg, #dbe059 0%, #c5cb1f 36%, #cee121 69%, #d8dc55 100%);
-  border: 5px solid #cbcf51;
+  border: 3px solid #cbcf51;
 }
 
 .overlay {

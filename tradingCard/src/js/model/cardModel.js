@@ -71,7 +71,7 @@ export const cardList = [
         'brown'
     ),
     new Card('Pompeii worm',
-        "Normally the pompeii worm's tail can be found resting in water up to 200 degrees farenheit!",
+        "The pompeii worm's tail can be found resting in water up to 200 degrees farenheit!",
         'Alvinella pompejanaconcolor',
         '5 in.',
         'unknown',
@@ -104,7 +104,7 @@ export const cardList = [
         'green'
     ),
     new Card('Great White Shark',
-        "The Great White Shark is an apex predator found coastal waters of every ocean!",
+        "The Great White Shark is an apex predator found in coastal waters of every ocean!",
         'Carcharodon carcharias',
         '15 – 16 ft',
         'est. 30 to 70 years',
@@ -146,5 +146,16 @@ export const cardList = [
         'bilby.jpeg',
         'Bilby',
         'red'
+    ),
+    new Card('Okapi',
+        'The Okapi is also known as the forest giraffe, zebra giraffe, and Congolese giraffe.',
+        'Okapia johnstoni',
+        '5 - 5.5 ft.',
+        '15 - 20 years',
+        'Ituri Rainforest, Central Africa',
+        'The Okapi has a tongue that can grow to 14 inches in length! It is so long that they clean their ears and eyes with it, and even swat insects from their necks!',
+        'okapi.jpeg',
+        'Okapi',
+        'green'
     ),
 ];
