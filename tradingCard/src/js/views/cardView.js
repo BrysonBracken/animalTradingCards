@@ -34,7 +34,21 @@ export const renderCards = function (cardList) {
             cardsContainer.insertAdjacentHTML('beforeend', html);
         });
     } else {
-        html = '<p>No cards found</p>';
+        html = `
+        <div class="card-outline habitat-red">
+                    
+                    <!-- Card animal name -->
+                    <h2 class="title no-cards-title">Uh-oh!</h2>
+                    <div class="card-inner">
+                        <!-- Card animal picture -->
+                        <img class="animal-image" src="src/images/uh_oh.png" alt="Uh oh">
+                        <div class="info-outline no-cards-outline">
+                            <h2 class class="no-cards-text">No cards were found! Try another search or return home!</h2>
+                            <hr class="uh-oh">
+                            <p class="description">The uh-oh monkey urges you to browse the existing cards and try another search.</p>
+                        </div>
+                    </div>
+                </div>`;
         cardsContainer.insertAdjacentHTML('beforeend', html);
     }
 };
