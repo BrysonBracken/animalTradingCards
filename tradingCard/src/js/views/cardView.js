@@ -6,8 +6,7 @@ export const renderCards = function (cardList) {
     if (cardList.length) {
         cardList.forEach(function (card, i) {
             html = `
-                <div class="card-outline habitat-${card.habitatColor}">
-                    
+                <div class="card-outline habitat-${card.habitatColor}"> 
                     <!-- Card animal name -->
                     <h2 class="title">${card.animalName}</h2>
                     <div class="card-inner">

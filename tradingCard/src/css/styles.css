@@ -86,6 +86,34 @@ svg {
   padding: 10px;
 }
 
+/* Pagination */
+
+.pagination {
+  padding: 0 20%;
+  margin-top: 3rem;
+  display: flex;
+}
+
+.pagination-btn-container {
+  width: 5rem;
+  display: flex;
+  align-items: center;
+
+  flex-grow: 1;
+}
+
+.page-btn {
+  margin: auto;
+}
+
+.pagination-num-container {
+  flex-grow: 2;
+}
+
+.page-num {
+  text-align: center;
+}
+
 /* Options */
 
 .options {
@@ -172,13 +200,15 @@ body {
   background: rgb(226, 221, 208);
 }
 
-.cards-container {
+.card-content {
   padding: 2em;
-  margin: 0 10%;
+}
+
+.cards-container {
   display: flex;
   gap: 2em;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -357,4 +387,28 @@ hr {
 
 .hidden {
   display: none;
+}
+
+@media screen and (min-width: 1600px) {
+  .card-content {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .card-content {
+    margin: 0 20%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-content {
+    margin: 0 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card-outline {
+    zoom: 0.75;
+  }
 }

@@ -1,38 +1,56 @@
 import { cardList } from "./cardModel";
 import * as helper from '../helpers'
 
-export const state = {
+const state = {
     sortMethod: 'Oldest Arrivals',
     cards: cardList,
+    searchResults: [],
+    page: 1,
+    resultsPerPage: 4,
 };
 
+export let workingState = {};
+
+export const freshState = () => { workingState = structuredClone(state); };
+
 export const findCards = function (query) {
-    const cardResults = [];
-    state.cards.forEach(card => {
+    workingState = structuredClone(state);
+    const searchResults = [];
+    workingState.cards.forEach(card => {
         if (card.animalName.toLowerCase().includes(query)) {
-            cardResults.push(card);
+            searchResults.push(card);
         };
+        workingState.cards = searchResults;
     });
-    return cardResults;
 };
 
 export const sortCards = function (choice) {
-    state.sortMethod = choice
-    const cardsClone = structuredClone(state.cards);
+    workingState.sortMethod = choice
     switch (choice) {
         case 'Oldest Arrivals':
-            return cardsClone;
+            return workingState.cards;
         case 'Newest Arrivals':
-            return cardsClone.reverse();
+            return workingState.cards.reverse();
         case 'A-Z':
-            return cardsClone.sort(helper.alphaSort);
+            return workingState.cards.sort(helper.alphaSort);
         case 'Z-A':
-            return cardsClone.sort(helper.alphaSortReverse);
+            return workingState.cards.sort(helper.alphaSortReverse);
         case 'Scientific Name A-Z':
-            return cardsClone.sort(helper.scientificSort);
+            return workingState.cards.sort(helper.scientificSort);
         case 'Scientific name Z-A':
-            return cardsClone.sort(helper.scientificSortReverse);
+            return workingState.cards.sort(helper.scientificSortReverse);
         case 'Color':
-            return cardsClone.sort(helper.colorSort);
+            return workingState.cards.sort(helper.colorSort);
     };
 };
+
+// Pagination logic
+
+export const getPageCards = function (cardList, page = workingState.page) {
+    workingState.page = page;
+
+    const start = (page - 1) * workingState.resultsPerPage;
+    const end = page * workingState.resultsPerPage;
+
+    return cardList.slice(start, end)
+}
