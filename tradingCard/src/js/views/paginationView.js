@@ -1,6 +1,10 @@
 const paginationContainer = document.querySelector('.pagination');
 
 export const renderPagination = function (currentPage, numOfPages) {
+    if (!numOfPages) {
+        paginationContainer.innerHTML = '';
+        return;
+    }
     const html = `
     <div class="pagination-btn-container">
         <button data-goto="${currentPage - 1}" class="page-btn back">
