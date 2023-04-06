@@ -62,3 +62,27 @@ export const colorSort = function (a, b) {
     }
     return 0;
 };
+
+export const dateSort = function (a, b) {
+    const numA = a.originalIndex;
+    const numB = b.originalIndex;
+    if (numA > numB) {
+        return 1;
+    }
+    if (numB > numA) {
+        return -1;
+    }
+    return 0;
+};
+
+export const reverseDateSort = function (a, b) {
+    const numA = a.originalIndex;
+    const numB = b.originalIndex;
+    if (numA < numB) {
+        return 1;
+    }
+    if (numB < numA) {
+        return -1;
+    }
+    return 0;
+};

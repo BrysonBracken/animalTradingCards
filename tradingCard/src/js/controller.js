@@ -6,7 +6,7 @@ import * as paginationView from './views/paginationView'
 
 // rendercards needs to get card list from model and same for pagonation
 
-const cardPaginationRender = function (cardList = model.workingState.cards, goToPage = model.workingState.page) {
+const cardPaginationRender = function (cardList = model.sortCards(model.workingState.sortMethod), goToPage = model.workingState.page) {
     const numOfPages = Math.ceil(cardList.length / model.workingState.resultsPerPage);
     cardView.renderCards(model.getPageCards(cardList, goToPage))
     paginationView.renderPagination(goToPage, numOfPages)

@@ -14,7 +14,7 @@ class Card {
     }
 };
 
-export const cardList = [
+export let cardList = [
     new Card('Spider Monkey',
         'Spider monkeys are named after their spider-like appearance as they hang upside down by their tails.',
         'Ateles',

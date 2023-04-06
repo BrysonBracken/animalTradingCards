@@ -1,6 +1,8 @@
 const cardsContainer = document.querySelector('.cards-container');
 
 export const renderCards = function (cardList) {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
     let html = '';
     cardsContainer.innerHTML = html;
     if (cardList.length) {

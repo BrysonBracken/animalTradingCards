@@ -1,7 +1,5 @@
 /* Navbar */
 .precontent {
-  top: 0;
-  left: 0;
   height: 30em;
   background: rgb(27, 85, 34);
   background: linear-gradient(157deg, rgba(27, 85, 34, 1) 4%, rgba(17, 73, 23, 1) 32%, rgba(4, 41, 8, 1) 85%);
@@ -147,7 +145,6 @@ svg {
 .options {
   display: flex;
   justify-content: flex-end;
-  align-self: flex-end;
 }
 
 /* sort */
@@ -165,13 +162,14 @@ svg {
 .sort-modal {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   background-color: #e9e9e9;
   padding: 0.5em 1em 2em;
-  z-index: 100;
+  z-index: 499;
   transition: all 0.5s;
   border: solid #dbc412 8px;
-  border-bottom-left-radius: 25px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .sort-title {
@@ -189,7 +187,6 @@ svg {
 /* Footer */
 
 footer {
-  bottom: 0;
   background-color: #000;
   color: #fff;
   height: 3em;
@@ -222,14 +219,13 @@ hr.uh-oh {
 */
 
 .content {
-  margin: auto auto auto;
-  z-index: 50;
-  position: absolute;
+  margin: -20rem 5% 5%;
+  align-self: center;
+  position: relative;
   background: rgb(236, 222, 188);
   background: linear-gradient(180deg, rgba(236, 222, 188, 1) 4%, rgba(244, 244, 244, 1) 41%);
-  gap: 2em;
   box-shadow: 0px 4px 27px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 
@@ -238,6 +234,8 @@ body {
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
   background: #f4f4f4;
   min-height: 100vh;
 }
@@ -427,45 +425,41 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 90;
 }
 
 .hidden {
   display: none;
 }
 
-@media screen and (min-width: 1600px) {
-  .content {
-    margin: -20rem 10% auto;
+@media screen and (max-width: 1450px) {
+  .card-content {
+    margin: auto 18%;
   }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1080px) {
   .content {
-    margin: -25rem 25% auto;
-    padding: auto 2%;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .card-outline {
-    zoom: 0.75;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .content {
-    margin: -25rem 0 auto;
-    padding: 0 10%;
+    min-width: 100%;
+    margin-bottom: auto;
   }
 
-  .card-outline {
-    zoom: 1;
+  .card-content {
+    margin: auto 10%;
+  }
+
+  .pagination {
+    padding: 0;
+    gap: 0.5rem;
   }
 }
 
 @media screen and (max-width: 375px) {
   .card-outline {
+    zoom: 0.75;
+  }
+
+  .pagination {
     zoom: 0.75;
   }
 }

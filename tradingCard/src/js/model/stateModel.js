@@ -2,8 +2,8 @@ import { cardList } from "./cardModel";
 import * as helper from '../helpers'
 
 const state = {
-    sortMethod: 'Oldest Arrivals',
-    cards: cardList,
+    sortMethod: 'A-Z',
+    cards: cardList.map((card, i) => ({ ...card, originalIndex: i })),
     searchResults: [],
     page: 1,
     resultsPerPage: 4,
@@ -11,7 +11,9 @@ const state = {
 
 export let workingState = {};
 
-export const freshState = () => { workingState = structuredClone(state); };
+export const freshState = () => {
+    workingState = structuredClone(state);
+};
 
 export const findCards = function (query) {
     workingState = structuredClone(state);
@@ -28,9 +30,9 @@ export const sortCards = function (choice) {
     workingState.sortMethod = choice
     switch (choice) {
         case 'Oldest Arrivals':
-            return workingState.cards;
+            return workingState.cards.sort(helper.dateSort);
         case 'Newest Arrivals':
-            return workingState.cards.reverse();
+            return workingState.cards.sort(helper.reverseDateSort);
         case 'A-Z':
             return workingState.cards.sort(helper.alphaSort);
         case 'Z-A':

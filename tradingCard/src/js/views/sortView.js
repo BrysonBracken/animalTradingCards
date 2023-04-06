@@ -31,7 +31,9 @@ export const handleModalClose = function (handler) {
         if (e.key === 'Escape') handler();
     });
     overlay.addEventListener('click', e => {
-        if (overlay.classList.contains('sort-overlay')) handler();
+        if (overlay.classList.contains('sort-overlay')) {
+            handler()
+        };
     });
 };
 
