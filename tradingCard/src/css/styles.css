@@ -1,4 +1,13 @@
 /* Navbar */
+.precontent {
+  top: 0;
+  left: 0;
+  height: 30em;
+  background: rgb(27, 85, 34);
+  background: linear-gradient(157deg, rgba(27, 85, 34, 1) 4%, rgba(17, 73, 23, 1) 32%, rgba(4, 41, 8, 1) 85%);
+  margin: 0;
+  box-shadow: 0px 1px 10px #999;
+}
 
 .navbar {
   position: sticky;
@@ -6,12 +15,10 @@
   left: 0;
   display: flex;
   justify-content: stretch;
-  height: 4em;
-  background-color: #fff;
+  height: 4rem;
   margin: 0;
   overflow: hidden;
   z-index: 500;
-  box-shadow: 0px 1px 10px #999;
 }
 
 .nav-1 {
@@ -26,14 +33,13 @@
   flex-grow: 1;
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: center;
-  align-content: center;
+  /* align-items: center; */
+  /* align-content: center; */
 }
 
 .logo {
-  margin-left: 1em;
-  height: 100%;
+  margin-left: 1rem;
+  height: 4rem;
 }
 
 .nav-item {
@@ -58,7 +64,7 @@
   border-width: 2px;
   border-style: solid;
   overflow: hidden;
-  margin: auto 1em;
+  margin: 1rem 1rem;
 }
 
 #search {
@@ -90,28 +96,50 @@ svg {
 
 .pagination {
   padding: 0 20%;
-  margin-top: 3rem;
+  margin: 2rem auto;
   display: flex;
+  gap: 1rem;
 }
 
 .pagination-btn-container {
   width: 5rem;
   display: flex;
   align-items: center;
-
   flex-grow: 1;
 }
 
 .page-btn {
   margin: auto;
+  background-color: #755c0b;
+  border-radius: 25rem;
+  color: #fff;
+  font-weight: 400;
+  padding: 0.4rem 0.75rem;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.page-btn:hover {
+  transform: translate(0%, -5%);
+  background-color: #9a7a0f;
+}
+
+.page-btn:active {
+  transform: translate(0%, -5%) scale(0.95);
+  background-color: #9a7a0fb6;
 }
 
 .pagination-num-container {
+  margin: auto;
   flex-grow: 2;
 }
 
 .page-num {
   text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 /* Options */
@@ -119,6 +147,7 @@ svg {
 .options {
   display: flex;
   justify-content: flex-end;
+  align-self: flex-end;
 }
 
 /* sort */
@@ -160,6 +189,7 @@ svg {
 /* Footer */
 
 footer {
+  bottom: 0;
   background-color: #000;
   color: #fff;
   height: 3em;
@@ -192,16 +222,31 @@ hr.uh-oh {
 */
 
 .content {
-  min-height: 90vh;
+  margin: auto auto auto;
+  z-index: 50;
+  position: absolute;
+  background: rgb(236, 222, 188);
+  background: linear-gradient(180deg, rgba(236, 222, 188, 1) 4%, rgba(244, 244, 244, 1) 41%);
+  gap: 2em;
+  box-shadow: 0px 4px 27px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
+
 
 body {
   margin: 0;
-  background: rgb(226, 221, 208);
+}
+
+.page {
+  background: #f4f4f4;
+  min-height: 100vh;
 }
 
 .card-content {
-  padding: 2em;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cards-container {
@@ -390,20 +435,32 @@ hr {
 }
 
 @media screen and (min-width: 1600px) {
-  .card-content {
-    margin: 0 10%;
+  .content {
+    margin: -20rem 10% auto;
   }
 }
 
 @media screen and (max-width: 1600px) {
-  .card-content {
-    margin: 0 20%;
+  .content {
+    margin: -25rem 25% auto;
+    padding: auto 2%;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .card-content {
-    margin: 0 0;
+@media screen and (max-width: 1300px) {
+  .card-outline {
+    zoom: 0.75;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .content {
+    margin: -25rem 0 auto;
+    padding: 0 10%;
+  }
+
+  .card-outline {
+    zoom: 1;
   }
 }
 

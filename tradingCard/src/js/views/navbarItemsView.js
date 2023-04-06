@@ -1,6 +1,6 @@
 const searchInput = document.querySelector('#search');
 const searchForm = document.querySelector('#search-form');
-const homeButton = document.querySelector('.home');
+const homeButton = document.querySelector('.logo');
 
 export const handleSearchQuery = function (handler) {
     searchForm.addEventListener('submit', e => {
