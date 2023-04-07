@@ -1,6 +1,6 @@
 /* Navbar */
 .precontent {
-  height: 30em;
+  height: 28em;
   background: rgb(27, 85, 34);
   background: linear-gradient(157deg, rgba(27, 85, 34, 1) 4%, rgba(17, 73, 23, 1) 32%, rgba(4, 41, 8, 1) 85%);
   margin: 0;
@@ -20,9 +20,11 @@
 }
 
 .nav-1 {
+  display: flex;
   flex-grow: 1;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .nav-2 {
@@ -31,6 +33,8 @@
   flex-grow: 1;
   margin: 0;
   padding: 0;
+  min-width: 0;
+  align-items: center;
   /* align-items: center; */
   /* align-content: center; */
 }
@@ -54,7 +58,7 @@
   background-color: #f4f4f4;
   border-radius: 1.5em;
   width: 15em;
-  height: 44px;
+  height: 2.8rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -452,6 +456,15 @@ hr {
     padding: 0;
     gap: 0.5rem;
   }
+
+  .logo {
+    height: 3rem;
+  }
+
+  #search-form {
+    height: 2.5rem;
+  }
+
 }
 
 @media screen and (max-width: 375px) {
@@ -460,6 +473,14 @@ hr {
   }
 
   .pagination {
+    zoom: 0.75;
+  }
+
+  .precontent {
+    zoom: 0.9;
+  }
+
+  .options {
     zoom: 0.75;
   }
 }
