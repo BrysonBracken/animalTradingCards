@@ -10,7 +10,10 @@ export const renderCards = function (cardList) {
             html = `
                 <div class="card-outline habitat-${card.habitatColor}"> 
                     <!-- Card animal name -->
-                    <h2 class="title">${card.animalName}</h2>
+                    <div class="name-rarity">
+                    <h2 class="name">${card.animalName}</h2>
+                    <h4 class="rarity">${card.rarity}</h4>
+                    </div>
                     <div class="card-inner">
                         <!-- Card animal picture -->
                         <img class="animal-image" src="src/images/${card.imgSrc}" alt="${card.imgAlt}">

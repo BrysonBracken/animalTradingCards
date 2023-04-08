@@ -114,7 +114,7 @@ svg {
   margin: auto;
   background-color: #755c0b;
   border-radius: 25rem;
-  color: #fff;
+  color: #ffffff;
   font-weight: 400;
   padding: 0.4rem 0.75rem;
   line-height: 1.5;
@@ -270,8 +270,23 @@ body {
   flex-direction: column;
 }
 
-h2 {
-  margin: 7px 14px;
+.name-rarity {
+  max-height: 2rem;
+  margin: 0.2rem 1rem;
+  padding-top: 0.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rarity {
+  font-family: 'Kanit', sans-serif;
+  text-align: right;
+  font-size: 0.75em;
+  align-self: flex-start;
+}
+
+.name {
+  margin: 0;
   font-family: 'Kanit', sans-serif;
   text-align: left;
   font-size: 1em;

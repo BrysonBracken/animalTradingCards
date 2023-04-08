@@ -1,6 +1,6 @@
 class Card {
     constructor(animalName, facts, scientificName, height,
-        lifespan, habitat, description, imgSrc, imgAlt, habitatColor) {
+        lifespan, habitat, description, imgSrc, rarity, habitatColor) {
         this.animalName = animalName;
         this.facts = facts;
         this.scientificName = scientificName;
@@ -9,7 +9,8 @@ class Card {
         this.habitat = habitat;
         this.description = description;
         this.imgSrc = imgSrc
-        this.imgAlt = imgAlt;
+        this.imgAlt = animalName;
+        this.rarity = rarity // common, uncommon, rare, epic
         this.habitatColor = habitatColor;
     }
 };
@@ -23,7 +24,7 @@ export let cardList = [
         'Tropical rainforests',
         'They are found in tropical forests of Central and South America, from the south of Mexico to Brazil. Spider monkeys have long dexterous tails that they use as a fifth limb to hold on to tree branches. The genus is made up of seven species.',
         'makm-photography-Glm8xUm8Am4-unsplash.jpg',
-        'Spider Monkey',
+        'Common',
         'green'
     ),
     new Card('Mantis Shrimp',
@@ -34,7 +35,7 @@ export let cardList = [
         'Indian & Pacific Oceans',
         'A small, aggressive marine Crustacean found in tropical and subtropical oceans. They sport vibrant colors and can club prey with the force of a bullet.',
         'mantis.jpg',
-        'Mantis Shrimp',
+        'Rare',
         'blue'
     ),
     new Card('Olm Salamander',
@@ -45,7 +46,7 @@ export let cardList = [
         'Well oxygenated underground water',
         'The olm salamander is blind and "sees" through weak electromagnetic pulses, sounds, and smells. Locals believe it to be babies of cave dragons.',
         'salamander.jpeg',
-        'Olm Salamander',
+        'Epic',
         'grey'
     ),
     new Card('Emperor Scorpion',
@@ -56,7 +57,7 @@ export let cardList = [
         'West Africa',
         "The Emperor scorpion has sensory hairs to detect vibrations in the air and ground so that they can sense prey. The Emperor scorpion's sting is normally not lethal.",
         'Scorpion.jpeg',
-        'Emperor Scropion',
+        'Rare',
         'brown'
     ),
     new Card('Puma',
@@ -67,7 +68,7 @@ export let cardList = [
         'Americas',
         "Pumas hold the world record for animal with the most names, being referred to as puma, cougar, mountain lion, and the list continues with many more names!",
         'puma.jpeg',
-        'Puma',
+        'Common',
         'brown'
     ),
     new Card('Pompeii worm',
@@ -78,7 +79,7 @@ export let cardList = [
         'Hydrothermal vents',
         "The pompeii worm is known as an extremophile, meaning that it thrives in extreme conditions.",
         'pompeii_worm.jpeg',
-        'Pompeii worm',
+        'Epic',
         'red'
     ),
     new Card('Canary',
@@ -89,7 +90,7 @@ export let cardList = [
         'Originated in Macaronesian Islands',
         "The male canary is the better singer compared to its counter part. This is due to the male's song being a method of attracting a female and marking their territory.",
         'canary.jpeg',
-        'Canary',
+        'Common',
         'yellow'
     ),
     new Card('Leafcutter Ant',
@@ -100,7 +101,7 @@ export let cardList = [
         'Latin American and Caribbean forest floors',
         "Leafcutter ant is a generic name that encompasses 40+ ant species that chew leaves. They can carry up to 50 times their weight!",
         'leaf_cutter_ant.jpeg',
-        'Leafcutter Ant',
+        'Uncommon',
         'green'
     ),
     new Card('Great White Shark',
@@ -111,7 +112,7 @@ export let cardList = [
         'Coastal waters',
         "Despite the ferocious man-eating depiction made by the Steven Spielberg movie 'Jaws,' Great White Shark attacks are actually rare!",
         'great_white_shark.jpeg',
-        'Great White Shark',
+        'Uncommon',
         'blue'
     ),
     new Card('Toucan',
@@ -122,7 +123,7 @@ export let cardList = [
         'Central and South America',
         "The bright colors of the Toucan are actually a clever means of camouflage! Their bright colors alongside the black makes them blend in to the colorful forest plants.",
         'toucan.jpeg',
-        'Toucan',
+        'Common',
         'yellow'
     ),
     new Card('Mountain Goat',
@@ -133,7 +134,7 @@ export let cardList = [
         'Northwestern North America',
         'The Mountain Goat can jump up to 12 ft to aid in traversing the steep, treacherous mountain sides!',
         'mountain_goat.jpeg',
-        'Mountain Goat',
+        'Common',
         'grey'
     ),
     new Card('Greater Bilby',
@@ -144,7 +145,7 @@ export let cardList = [
         'Range of Australian habitats',
         'The Greater Bilby copes with the extreme Australian heat by sleeping during the day and feeding at night. The obtain all of their water from the plants and insects that they feed on.',
         'bilby.jpeg',
-        'Bilby',
+        'Rare',
         'red'
     ),
     new Card('Okapi',
@@ -155,7 +156,7 @@ export let cardList = [
         'Ituri Rainforest, Central Africa',
         'The Okapi has a tongue that can grow to 14 inches in length! It is so long that they clean their ears and eyes with it, and even swat insects from their necks!',
         'okapi.jpeg',
-        'Okapi',
+        'Epic',
         'green'
     ),
 ];

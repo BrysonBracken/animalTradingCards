@@ -29,9 +29,9 @@ export const findCards = function (query) {
 export const sortCards = function (choice) {
     workingState.sortMethod = choice
     switch (choice) {
-        case 'Oldest Arrivals':
+        case 'Oldest First':
             return workingState.cards.sort(helper.dateSort);
-        case 'Newest Arrivals':
+        case 'Newest First':
             return workingState.cards.sort(helper.reverseDateSort);
         case 'A-Z':
             return workingState.cards.sort(helper.alphaSort);
@@ -43,6 +43,10 @@ export const sortCards = function (choice) {
             return workingState.cards.sort(helper.scientificSortReverse);
         case 'Color':
             return workingState.cards.sort(helper.colorSort);
+        case 'Most Common First':
+            return workingState.cards.sort(helper.raritySort);
+        case 'Least Common First':
+            return workingState.cards.sort(helper.reverseRaritySort);
     };
 };
 

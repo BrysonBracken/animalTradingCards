@@ -86,3 +86,40 @@ export const reverseDateSort = function (a, b) {
     }
     return 0;
 };
+
+const rarityEnum = function (rarityString) {
+    switch (rarityString.toLowerCase()) {
+        case 'common':
+            return 1;
+        case 'uncommon':
+            return 2;
+        case 'rare':
+            return 3;
+        case 'epic':
+            return 4;
+    }
+};
+
+export const raritySort = function (a, b) {
+    const numA = rarityEnum(a.rarity);
+    const numB = rarityEnum(b.rarity);
+    if (numA > numB) {
+        return 1;
+    }
+    if (numB > numA) {
+        return -1;
+    }
+    return 0;
+};
+
+export const reverseRaritySort = function (a, b) {
+    const numA = rarityEnum(a.rarity);
+    const numB = rarityEnum(b.rarity);
+    if (numA < numB) {
+        return 1;
+    }
+    if (numB < numA) {
+        return -1;
+    }
+    return 0;
+};
