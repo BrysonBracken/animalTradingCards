@@ -138,6 +138,26 @@ const uncommon = [
         'great_white_shark.jpeg',
         'blue'
     ),
+    new Card('Armadillo',
+        "The armadillo is a barrel shaped animal with bony plates along its back.",
+        'Dasypodidae',
+        '17 in.',
+        '15 years',
+        'Warm regions of South America to portions of the United States',
+        "The armadillo is Spanish for 'little armored one' due to it being covered in natural bony armor!",
+        'armadillo.jpeg',
+        'green'
+    ),
+    new Card('Great Horned Owl',
+        "The great horned owl is the largest owl native to the Americas.",
+        'Bubo virginianus',
+        '35 in.',
+        '30 years',
+        'Most regions of North America',
+        "The great horned owl has a terrible sense of smell, but makes up for that disability with its super hearing. The great horned owl can hear sounds up to ten miles away!",
+        'great_horned_owl.jpeg',
+        'yellow'
+    ),
 ];
 
 const rare = [
