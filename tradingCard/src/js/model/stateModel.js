@@ -3,7 +3,7 @@ import * as helper from '../helpers'
 
 const state = {
     sortMethod: 'A-Z',
-    cards: cardList.map((card, i) => ({ ...card, originalIndex: i })),
+    cards: cardList.flat(1).map((card, i) => ({ ...card, originalIndex: i })),
     searchResults: [],
     page: 1,
     resultsPerPage: 4,
