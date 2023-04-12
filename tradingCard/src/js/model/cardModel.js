@@ -158,6 +158,16 @@ const uncommon = [
         'great_horned_owl.jpeg',
         'yellow'
     ),
+    new Card('Elk',
+        "The elk, like a deer but larger, is one one of the largest species of the Cervidae(deer) family.",
+        'Cervus canadensis',
+        '9 ft.',
+        '15 years',
+        'Mountains of North/Central America and East Asia',
+        "Despite the elk's great size, it is rather quick and agile. It can run up 40 miles per hour and has an eight ft. vertical jump!",
+        'elk.jpeg',
+        'green'
+    ),
 ];
 
 const rare = [
@@ -189,7 +199,17 @@ const rare = [
         'Range of Australian habitats',
         'The greater bilby copes with the extreme Australian heat by sleeping during the day and feeding at night. The obtain all of their water from the plants and insects that they feed on.',
         'bilby.jpeg',
-        'red'
+        'brown'
+    ),
+    new Card('Vampire Bat',
+        'The vampire bat is a leaf-nosed bat whose food source is animal blood.',
+        'Desmodontinae',
+        '3 in.',
+        '9 years',
+        'Central and South America',
+        'The vampire bat, unlike some other types of bats, can run and jump at fast speeds! It even has a special thumb to help them take off after feeding.',
+        'vampire_bat.jpeg',
+        'grey'
     ),
 ];
 
@@ -212,7 +232,7 @@ const epic = [
         'Hydrothermal vents',
         "The pompeii worm is known as an extremophile, meaning that it thrives in extreme conditions.",
         'pompeii_worm.jpeg',
-        'red'
+        'blue'
     ),
     new Card('Okapi',
         'The okapi is also known as the forest giraffe, zebra giraffe, and Congolese giraffe.',
